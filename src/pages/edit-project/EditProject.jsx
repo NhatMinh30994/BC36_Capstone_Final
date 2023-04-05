@@ -8,12 +8,6 @@ import { useForm } from "antd/es/form/Form";
 
 export default function EditProject() {
   const editorRef = useRef(null);
-  // const [form, setForm] = useState({
-  //   id: "",
-  //   projectName: "",
-  //   categoryId: "",
-  //   description: ""
-  // })
   const [form] = useForm();
   const params = useParams();
   const navigate = useNavigate();
@@ -82,7 +76,7 @@ export default function EditProject() {
       </Form.Item>
       <Form.Item label="Project category" name="categoryId">
         <Select>
-          <Select.Option value="demo">Demo</Select.Option>
+          <Select.Option></Select.Option>
         </Select>
       </Form.Item>
       <Editor

@@ -19,6 +19,9 @@ export default function EditUser() {
     form.setFieldsValue({
       id: result.data.content.userId,
       name: result.data.content.name,
+      email: result.data.content.email,
+      passWord: result.data.content.passWord,
+      phoneNumber: result.data.content.phoneNumber,
     });
   };
 

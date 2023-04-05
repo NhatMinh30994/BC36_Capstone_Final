@@ -126,7 +126,6 @@
 }
 
 .menu .control {
-  /* padding: 0% 10%; */
   text-align: left;
   margin-bottom: 8%;
   border-bottom: 2px solid #c4c5c6;
@@ -145,9 +144,6 @@
   text-decoration: none;
 }
 
-/* .menu .control div span:first-child {
-  margin-right: 10px;
-} */
 .menu .control div .svg-inline--fa{
   margin-right: 5px;
 }
@@ -161,11 +157,11 @@
 }
 
 .menu .feature {
-  padding: 0% 10%;
   text-align: left;
   margin-bottom: 8%;
-  margin-left: 7%;
-  margin-right: 7%;
+  border-bottom: 2px solid #c4c5c6;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .menu .feature div {
@@ -180,6 +176,28 @@
 
 .menu .feature div span {
   font-size: 14px;
+}
+
+.menu .logout {
+  text-align: left;
+  margin-left: 10%;
+  margin-right: 10%;
+  align-items: center;
+}
+
+.menu .logout div {
+  margin-bottom: 5px;
+  padding: 2% 3%;
+  cursor: pointer;
+  color: red;
+}
+
+.menu .logout div .svg-inline--fa {
+  margin-right: 5px;
+}
+
+.menu .logout div span {
+  font-size: 20px;
 }
 
 .main {

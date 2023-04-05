@@ -1,22 +1,24 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import DrawerJira from "../../pages/drawer/DrawerJira";
+import { useDispatch } from "react-redux";
+import { setUserInfoAction } from "../../store/actions/userAction";
 
 export default function MenuJira() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    localStorage.removeItem("USER_INFO_KEY");
+    dispatch(setUserInfoAction(null));
+    navigate("/login")
+  };
   return (
     <div className="menu">
       <div className="account">
         <div className="avatar">
           <img src={require("../../assets/img/logo.PNG")} alt="" />
         </div>
-        {/* <div className="account-info">
-          <p>CyberLearn.vn</p>
-          <p>Report bugs</p>
-        </div> */}
       </div>
       <div className="control">
-        {/* <DrawerJira/> */}
         <div>
           <i className="fa fa-credit-card" />
           <a>Kanban Board</a>
@@ -24,7 +26,6 @@ export default function MenuJira() {
         <div>
           <i className="fa fa-cog" />
           <NavLink to="/">Project Management</NavLink>
-          {/* <span onClick={() => navigate("/")}>Cyber Board</span> */}
         </div>
         <div>
           <i className="fa-solid fa-pen"></i>
@@ -55,6 +56,12 @@ export default function MenuJira() {
         <div>
           <i className="fa fa-box" />
           <span>Components</span>
+        </div>
+      </div>
+      <div className="logout" onClick={handleLogout}>
+        <div>
+          <i className="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
         </div>
       </div>
     </div>
